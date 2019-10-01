@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		372DCFCC2343092300EC62ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCB2343092300EC62ED /* AppDelegate.swift */; };
+		372DCFCE2343092300EC62ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCD2343092300EC62ED /* SceneDelegate.swift */; };
+		372DCFD02343092300EC62ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCF2343092300EC62ED /* ViewController.swift */; };
+		372DCFD32343092300EC62ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD12343092300EC62ED /* Main.storyboard */; };
+		372DCFD52343092400EC62ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD42343092400EC62ED /* Assets.xcassets */; };
+		372DCFD82343092400EC62ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD62343092400EC62ED /* LaunchScreen.storyboard */; };
+		372DCFE32343092400EC62ED /* MuffinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFE22343092400EC62ED /* MuffinTests.swift */; };
+		372DCFEE2343092400EC62ED /* MuffinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFED2343092400EC62ED /* MuffinUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		372DCFDF2343092400EC62ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372DCFC02343092300EC62ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372DCFC72343092300EC62ED;
+			remoteInfo = Muffin;
+		};
+		372DCFEA2343092400EC62ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 372DCFC02343092300EC62ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 372DCFC72343092300EC62ED;
+			remoteInfo = Muffin;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		372DCFC82343092300EC62ED /* Muffin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muffin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		372DCFCB2343092300EC62ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		372DCFCD2343092300EC62ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		372DCFCF2343092300EC62ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		372DCFD22343092300EC62ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		372DCFD42343092400EC62ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		372DCFD72343092400EC62ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		372DCFD92343092400EC62ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372DCFDE2343092400EC62ED /* MuffinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuffinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372DCFE22343092400EC62ED /* MuffinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuffinTests.swift; sourceTree = "<group>"; };
+		372DCFE42343092400EC62ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372DCFE92343092400EC62ED /* MuffinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuffinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		372DCFED2343092400EC62ED /* MuffinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuffinUITests.swift; sourceTree = "<group>"; };
+		372DCFEF2343092400EC62ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		372DCFC52343092300EC62ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372DCFDB2343092400EC62ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372DCFE62343092400EC62ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		372DCFBF2343092300EC62ED = {
+			isa = PBXGroup;
+			children = (
+				372DCFCA2343092300EC62ED /* Muffin */,
+				372DCFE12343092400EC62ED /* MuffinTests */,
+				372DCFEC2343092400EC62ED /* MuffinUITests */,
+				372DCFC92343092300EC62ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		372DCFC92343092300EC62ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				372DCFC82343092300EC62ED /* Muffin.app */,
+				372DCFDE2343092400EC62ED /* MuffinTests.xctest */,
+				372DCFE92343092400EC62ED /* MuffinUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		372DCFCA2343092300EC62ED /* Muffin */ = {
+			isa = PBXGroup;
+			children = (
+				372DCFCB2343092300EC62ED /* AppDelegate.swift */,
+				372DCFCD2343092300EC62ED /* SceneDelegate.swift */,
+				372DCFCF2343092300EC62ED /* ViewController.swift */,
+				372DCFD12343092300EC62ED /* Main.storyboard */,
+				372DCFD42343092400EC62ED /* Assets.xcassets */,
+				372DCFD62343092400EC62ED /* LaunchScreen.storyboard */,
+				372DCFD92343092400EC62ED /* Info.plist */,
+			);
+			path = Muffin;
+			sourceTree = "<group>";
+		};
+		372DCFE12343092400EC62ED /* MuffinTests */ = {
+			isa = PBXGroup;
+			children = (
+				372DCFE22343092400EC62ED /* MuffinTests.swift */,
+				372DCFE42343092400EC62ED /* Info.plist */,
+			);
+			path = MuffinTests;
+			sourceTree = "<group>";
+		};
+		372DCFEC2343092400EC62ED /* MuffinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				372DCFED2343092400EC62ED /* MuffinUITests.swift */,
+				372DCFEF2343092400EC62ED /* Info.plist */,
+			);
+			path = MuffinUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		372DCFC72343092300EC62ED /* Muffin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372DCFF22343092400EC62ED /* Build configuration list for PBXNativeTarget "Muffin" */;
+			buildPhases = (
+				372DCFC42343092300EC62ED /* Sources */,
+				372DCFC52343092300EC62ED /* Frameworks */,
+				372DCFC62343092300EC62ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Muffin;
+			productName = Muffin;
+			productReference = 372DCFC82343092300EC62ED /* Muffin.app */;
+			productType = "com.apple.product-type.application";
+		};
+		372DCFDD2343092400EC62ED /* MuffinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372DCFF52343092400EC62ED /* Build configuration list for PBXNativeTarget "MuffinTests" */;
+			buildPhases = (
+				372DCFDA2343092400EC62ED /* Sources */,
+				372DCFDB2343092400EC62ED /* Frameworks */,
+				372DCFDC2343092400EC62ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372DCFE02343092400EC62ED /* PBXTargetDependency */,
+			);
+			name = MuffinTests;
+			productName = MuffinTests;
+			productReference = 372DCFDE2343092400EC62ED /* MuffinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		372DCFE82343092400EC62ED /* MuffinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 372DCFF82343092400EC62ED /* Build configuration list for PBXNativeTarget "MuffinUITests" */;
+			buildPhases = (
+				372DCFE52343092400EC62ED /* Sources */,
+				372DCFE62343092400EC62ED /* Frameworks */,
+				372DCFE72343092400EC62ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				372DCFEB2343092400EC62ED /* PBXTargetDependency */,
+			);
+			name = MuffinUITests;
+			productName = MuffinUITests;
+			productReference = 372DCFE92343092400EC62ED /* MuffinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		372DCFC02343092300EC62ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Daniel Singh";
+				TargetAttributes = {
+					372DCFC72343092300EC62ED = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					372DCFDD2343092400EC62ED = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 372DCFC72343092300EC62ED;
+					};
+					372DCFE82343092400EC62ED = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = 372DCFC72343092300EC62ED;
+					};
+				};
+			};
+			buildConfigurationList = 372DCFC32343092300EC62ED /* Build configuration list for PBXProject "Muffin" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 372DCFBF2343092300EC62ED;
+			productRefGroup = 372DCFC92343092300EC62ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				372DCFC72343092300EC62ED /* Muffin */,
+				372DCFDD2343092400EC62ED /* MuffinTests */,
+				372DCFE82343092400EC62ED /* MuffinUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		372DCFC62343092300EC62ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372DCFD82343092400EC62ED /* LaunchScreen.storyboard in Resources */,
+				372DCFD52343092400EC62ED /* Assets.xcassets in Resources */,
+				372DCFD32343092300EC62ED /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372DCFDC2343092400EC62ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372DCFE72343092400EC62ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		372DCFC42343092300EC62ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372DCFD02343092300EC62ED /* ViewController.swift in Sources */,
+				372DCFCC2343092300EC62ED /* AppDelegate.swift in Sources */,
+				372DCFCE2343092300EC62ED /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372DCFDA2343092400EC62ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372DCFE32343092400EC62ED /* MuffinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		372DCFE52343092400EC62ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				372DCFEE2343092400EC62ED /* MuffinUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		372DCFE02343092400EC62ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372DCFC72343092300EC62ED /* Muffin */;
+			targetProxy = 372DCFDF2343092400EC62ED /* PBXContainerItemProxy */;
+		};
+		372DCFEB2343092400EC62ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 372DCFC72343092300EC62ED /* Muffin */;
+			targetProxy = 372DCFEA2343092400EC62ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		372DCFD12343092300EC62ED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				372DCFD22343092300EC62ED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		372DCFD62343092400EC62ED /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				372DCFD72343092400EC62ED /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		372DCFF02343092400EC62ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		372DCFF12343092400EC62ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		372DCFF32343092400EC62ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Muffin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSC190.Muffin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		372DCFF42343092400EC62ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Muffin/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSC190.Muffin;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		372DCFF62343092400EC62ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MuffinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSC190.MuffinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Muffin.app/Muffin";
+			};
+			name = Debug;
+		};
+		372DCFF72343092400EC62ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MuffinTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSC190.MuffinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Muffin.app/Muffin";
+			};
+			name = Release;
+		};
+		372DCFF92343092400EC62ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MuffinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSC190.MuffinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Muffin;
+			};
+			name = Debug;
+		};
+		372DCFFA2343092400EC62ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MuffinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = CSC190.MuffinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Muffin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		372DCFC32343092300EC62ED /* Build configuration list for PBXProject "Muffin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372DCFF02343092400EC62ED /* Debug */,
+				372DCFF12343092400EC62ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372DCFF22343092400EC62ED /* Build configuration list for PBXNativeTarget "Muffin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372DCFF32343092400EC62ED /* Debug */,
+				372DCFF42343092400EC62ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372DCFF52343092400EC62ED /* Build configuration list for PBXNativeTarget "MuffinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372DCFF62343092400EC62ED /* Debug */,
+				372DCFF72343092400EC62ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		372DCFF82343092400EC62ED /* Build configuration list for PBXNativeTarget "MuffinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				372DCFF92343092400EC62ED /* Debug */,
+				372DCFFA2343092400EC62ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 372DCFC02343092300EC62ED /* Project object */;
+}
