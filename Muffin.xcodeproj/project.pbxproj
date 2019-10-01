@@ -15,6 +15,7 @@
 		372DCFD82343092400EC62ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD62343092400EC62ED /* LaunchScreen.storyboard */; };
 		372DCFE32343092400EC62ED /* MuffinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFE22343092400EC62ED /* MuffinTests.swift */; };
 		372DCFEE2343092400EC62ED /* MuffinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFED2343092400EC62ED /* MuffinUITests.swift */; };
+		372DCFFC234309DF00EC62ED /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFFB234309DF00EC62ED /* Assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		372DCFE92343092400EC62ED /* MuffinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuffinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		372DCFED2343092400EC62ED /* MuffinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuffinUITests.swift; sourceTree = "<group>"; };
 		372DCFEF2343092400EC62ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		372DCFFB234309DF00EC62ED /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				372DCFCF2343092300EC62ED /* ViewController.swift */,
 				372DCFD12343092300EC62ED /* Main.storyboard */,
 				372DCFD42343092400EC62ED /* Assets.xcassets */,
+				372DCFFB234309DF00EC62ED /* Assets */,
 				372DCFD62343092400EC62ED /* LaunchScreen.storyboard */,
 				372DCFD92343092400EC62ED /* Info.plist */,
 			);
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				372DCFD82343092400EC62ED /* LaunchScreen.storyboard in Resources */,
+				372DCFFC234309DF00EC62ED /* Assets in Resources */,
 				372DCFD52343092400EC62ED /* Assets.xcassets in Resources */,
 				372DCFD32343092300EC62ED /* Main.storyboard in Resources */,
 			);
