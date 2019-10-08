@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		370F2867234D1D86001122B3 /* Oven WindowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F2866234D1D86001122B3 /* Oven WindowViewController.swift */; };
 		372DCFCC2343092300EC62ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCB2343092300EC62ED /* AppDelegate.swift */; };
 		372DCFCE2343092300EC62ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCD2343092300EC62ED /* SceneDelegate.swift */; };
-		372DCFD02343092300EC62ED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCF2343092300EC62ED /* ViewController.swift */; };
+		372DCFD02343092300EC62ED /* Main_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCF2343092300EC62ED /* Main_VC.swift */; };
 		372DCFD32343092300EC62ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD12343092300EC62ED /* Main.storyboard */; };
 		372DCFD52343092400EC62ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD42343092400EC62ED /* Assets.xcassets */; };
 		372DCFD82343092400EC62ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD62343092400EC62ED /* LaunchScreen.storyboard */; };
 		372DCFE32343092400EC62ED /* MuffinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFE22343092400EC62ED /* MuffinTests.swift */; };
 		372DCFEE2343092400EC62ED /* MuffinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFED2343092400EC62ED /* MuffinUITests.swift */; };
 		372DCFFC234309DF00EC62ED /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFFB234309DF00EC62ED /* Assets */; };
+		37BAFAAE234CF4EE00099B2F /* Pastry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAFAAD234CF4EE00099B2F /* Pastry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		370F2866234D1D86001122B3 /* Oven WindowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Oven WindowViewController.swift"; sourceTree = "<group>"; };
 		372DCFC82343092300EC62ED /* Muffin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muffin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		372DCFCB2343092300EC62ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		372DCFCD2343092300EC62ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		372DCFCF2343092300EC62ED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		372DCFCF2343092300EC62ED /* Main_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main_VC.swift; sourceTree = "<group>"; };
 		372DCFD22343092300EC62ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		372DCFD42343092400EC62ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		372DCFD72343092400EC62ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		372DCFED2343092400EC62ED /* MuffinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuffinUITests.swift; sourceTree = "<group>"; };
 		372DCFEF2343092400EC62ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372DCFFB234309DF00EC62ED /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
+		37BAFAAD234CF4EE00099B2F /* Pastry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pastry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +106,10 @@
 			isa = PBXGroup;
 			children = (
 				372DCFCB2343092300EC62ED /* AppDelegate.swift */,
+				37BAFAAD234CF4EE00099B2F /* Pastry.swift */,
 				372DCFCD2343092300EC62ED /* SceneDelegate.swift */,
-				372DCFCF2343092300EC62ED /* ViewController.swift */,
+				372DCFCF2343092300EC62ED /* Main_VC.swift */,
+				370F2866234D1D86001122B3 /* Oven WindowViewController.swift */,
 				372DCFD12343092300EC62ED /* Main.storyboard */,
 				372DCFD42343092400EC62ED /* Assets.xcassets */,
 				372DCFFB234309DF00EC62ED /* Assets */,
@@ -263,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				372DCFD02343092300EC62ED /* ViewController.swift in Sources */,
+				372DCFD02343092300EC62ED /* Main_VC.swift in Sources */,
 				372DCFCC2343092300EC62ED /* AppDelegate.swift in Sources */,
+				370F2867234D1D86001122B3 /* Oven WindowViewController.swift in Sources */,
+				37BAFAAE234CF4EE00099B2F /* Pastry.swift in Sources */,
 				372DCFCE2343092300EC62ED /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

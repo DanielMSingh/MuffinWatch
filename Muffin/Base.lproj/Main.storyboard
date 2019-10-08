@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
@@ -8,17 +8,23 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController id="01J-lp-oVM" customClass="Main_VC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-WR-F71">
-                                <rect key="frame" x="16" y="170" width="378" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Border Bit Upper.png" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-KQ-wHg">
+                                <rect key="frame" x="-1.5" y="-53" width="417" height="176"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="176" id="MU6-te-NBC"/>
+                                    <constraint firstAttribute="width" constant="417" id="aKq-By-h2q"/>
+                                </constraints>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-WR-F71">
+                                <rect key="frame" x="16" y="98" width="378" height="700"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tp3-Fd-PIw">
                                     <size key="itemSize" width="107" height="107"/>
@@ -34,7 +40,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="107" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-IZ-WNh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hbx-ya-CLI" userLabel="[Item]">
+                                                    <rect key="frame" x="-136" y="-270" width="378" height="647"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-IZ-WNh">
                                                     <rect key="frame" x="-67" y="-11" width="240" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
@@ -44,32 +57,70 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="UI bits.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" id="X0A-Hi-Lcq">
-                                <rect key="frame" x="-46" y="-9" width="501" height="936"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
-                                </accessibility>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Border bit Lower.png" translatesAutoresizingMaskIntoConstraints="NO" id="euP-ub-Emb">
+                                <rect key="frame" x="-12" y="762" width="438" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="438" id="Jm6-dl-gg5"/>
+                                    <constraint firstAttribute="width" constant="438" id="Tkr-Pu-fDk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="204" id="mvJ-Ph-91S"/>
+                                    <constraint firstAttribute="height" constant="204" id="zHC-KT-qML"/>
+                                </constraints>
                             </imageView>
-                            <tabBar opaque="NO" contentMode="scaleToFill" fixedFrame="YES" backgroundImage="Border bit.png" selectionIndicatorImage="Border bit.png" shadowImage="Border bit.png" translatesAutoresizingMaskIntoConstraints="NO" id="pln-TS-69l">
-                                <rect key="frame" x="0.0" y="830" width="414" height="49"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <items>
-                                    <tabBarItem title="Edit Item" image="hammer.fill" catalog="system" id="KLr-s1-Ssi"/>
-                                    <tabBarItem title="Add Item" image="plus.square.fill" catalog="system" id="RmR-vI-Kd7"/>
-                                    <tabBarItem title="Oven" image="clock.fill" catalog="system" id="EVA-pv-ehk"/>
-                                    <tabBarItem title="Account" image="person.fill" catalog="system" id="W1u-vH-kxK"/>
-                                </items>
-                            </tabBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[Daily Special]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97V-cn-JmD">
-                                <rect key="frame" x="112" y="88" width="185" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Icon Bit.png" translatesAutoresizingMaskIntoConstraints="NO" id="2hu-m8-5SY">
+                                <rect key="frame" x="87" y="60" width="240" height="119"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="bLw-Ef-6WU"/>
+                                    <constraint firstAttribute="width" constant="240" id="k0R-H9-flG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Daily Special]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97V-cn-JmD">
+                                <rect key="frame" x="141.5" y="120.5" width="131.5" height="25.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tabBar opaque="NO" contentMode="center" backgroundImage="Border bit Lower" itemPositioning="centered" translatesAutoresizingMaskIntoConstraints="NO" id="pln-TS-69l">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="s6c-ZB-FYp"/>
+                                </constraints>
+                                <items>
+                                    <tabBarItem title="Edit Item" image="hammer.fill" catalog="system" id="KLr-s1-Ssi"/>
+                                    <tabBarItem title="Add Item" image="plus.square.fill" catalog="system" id="RmR-vI-Kd7"/>
+                                    <tabBarItem title="" image="Oven_item" landscapeImage="Oven_item" largeContentSizeImage="Oven_item" selectedImage="Oven_item" id="EVA-pv-ehk" userLabel="Oven">
+                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
+                                    </tabBarItem>
+                                    <tabBarItem title="Account" image="person.fill" catalog="system" id="W1u-vH-kxK"/>
+                                </items>
+                            </tabBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x4N-xf-ZWJ" userLabel="Daily Special">
+                                <rect key="frame" x="154" y="69" width="106" height="100"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97533239879877576" blue="0.92044007674019179" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="pln-TS-69l" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6Zq-uE-bpA"/>
+                            <constraint firstAttribute="trailing" secondItem="pln-TS-69l" secondAttribute="trailing" id="AnJ-JA-gug"/>
+                            <constraint firstItem="euP-ub-Emb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DeG-yz-5Ql"/>
+                            <constraint firstItem="pln-TS-69l" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="M5M-Ko-C46"/>
+                            <constraint firstItem="2hu-m8-5SY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="Mcs-Tv-agi"/>
+                            <constraint firstItem="97V-cn-JmD" firstAttribute="centerY" secondItem="2hu-m8-5SY" secondAttribute="centerY" id="MeN-OB-g8j"/>
+                            <constraint firstItem="0cl-KQ-wHg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NHB-to-qJY"/>
+                            <constraint firstItem="0cl-KQ-wHg" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="euP-ub-Emb" secondAttribute="top" constant="-650" id="Q65-Tm-eUv"/>
+                            <constraint firstItem="pln-TS-69l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qjf-WY-Nnb"/>
+                            <constraint firstItem="x4N-xf-ZWJ" firstAttribute="centerX" secondItem="2hu-m8-5SY" secondAttribute="centerX" id="SSn-Wy-IKY"/>
+                            <constraint firstItem="pln-TS-69l" firstAttribute="top" secondItem="Zqk-WR-F71" secondAttribute="bottom" constant="15" id="XyL-07-dc4"/>
+                            <constraint firstItem="Zqk-WR-F71" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cs9-PI-Zzs"/>
+                            <constraint firstItem="pln-TS-69l" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dDh-r5-FmS"/>
+                            <constraint firstItem="Zqk-WR-F71" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="e0X-KH-WXp"/>
+                            <constraint firstItem="0cl-KQ-wHg" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-58" id="gDw-Vz-FtA"/>
+                            <constraint firstItem="x4N-xf-ZWJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iJR-on-xmh"/>
+                            <constraint firstItem="euP-ub-Emb" firstAttribute="top" secondItem="x4N-xf-ZWJ" secondAttribute="bottom" constant="593" id="oWB-4d-sHJ"/>
+                            <constraint firstItem="x4N-xf-ZWJ" firstAttribute="centerY" secondItem="2hu-m8-5SY" secondAttribute="centerY" id="q3a-ET-Lo4"/>
+                            <constraint firstItem="97V-cn-JmD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tRx-An-nbf"/>
+                            <constraint firstItem="2hu-m8-5SY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="w45-yJ-GS8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -77,11 +128,39 @@
             </objects>
             <point key="canvasLocation" x="1900.0000000000002" y="374.33035714285711"/>
         </scene>
+        <!--Oven Window View Controller-->
+        <scene sceneID="NnT-dx-287">
+            <objects>
+                <viewController id="XTX-t9-jS2" customClass="Oven_WindowViewController" customModule="Muffin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n1T-Vp-En7">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[OVEN VIEW]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaS-9S-hfH">
+                                <rect key="frame" x="20" y="77" width="381" height="211"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="39"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="L1s-Fy-Cus"/>
+                    </view>
+                    <size key="freeformSize" width="400" height="400"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d2N-T2-7j6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1963.7681159420292" y="-299.33035714285711"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="Border bit.png" width="216" height="46"/>
-        <image name="UI bits.png" width="216" height="398"/>
-        <image name="clock.fill" catalog="system" width="64" height="62"/>
+        <image name="Border Bit Upper.png" width="216" height="82"/>
+        <image name="Border bit Lower" width="216" height="78"/>
+        <image name="Border bit Lower.png" width="216" height="78"/>
+        <image name="Icon Bit.png" width="68" height="68"/>
+        <image name="Oven_item" width="63" height="73"/>
+        <image name="doc" catalog="system" width="56" height="64"/>
         <image name="hammer.fill" catalog="system" width="64" height="56"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
         <image name="plus.square.fill" catalog="system" width="64" height="56"/>
