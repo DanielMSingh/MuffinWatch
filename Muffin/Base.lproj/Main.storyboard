@@ -85,11 +85,17 @@
                                 <rect key="frame" x="45" y="826" width="57" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="edit" image="hammer.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="y33-hg-oxV" kind="show" id="hwF-Wn-l8K"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miv-IA-g4i">
                                 <rect key="frame" x="128" y="826" width="53" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add" image="plus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="y33-hg-oxV" kind="show" id="lq3-Yg-32D"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-9B-OUP">
                                 <rect key="frame" x="308" y="826" width="85" height="22"/>
@@ -98,7 +104,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwA-yo-fCC">
                                 <rect key="frame" x="134" y="98" width="146" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Daily Special" image="sun.min" catalog="system">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -205,4 +211,7 @@
         <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
         <image name="sun.min" catalog="system" width="64" height="60"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="FrR-nu-bat"/>
+    </inferredMetricsTieBreakers>
 </document>
