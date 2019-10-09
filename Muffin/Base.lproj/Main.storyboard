@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +23,7 @@
                                     <constraint firstAttribute="width" constant="417" id="aKq-By-h2q"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-WR-F71">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-WR-F71">
                                 <rect key="frame" x="10" y="154" width="394" height="644"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tp3-Fd-PIw">
@@ -57,7 +57,7 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Border bit Lower.png" translatesAutoresizingMaskIntoConstraints="NO" id="euP-ub-Emb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Border bit Lower.png" translatesAutoresizingMaskIntoConstraints="NO" id="euP-ub-Emb">
                                 <rect key="frame" x="-12" y="761" width="438" height="204"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="438" id="Jm6-dl-gg5"/>
@@ -73,58 +73,55 @@
                                     <constraint firstAttribute="width" constant="240" id="k0R-H9-flG"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Daily Special]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97V-cn-JmD">
-                                <rect key="frame" x="141.5" y="105.5" width="131.5" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <tabBar opaque="NO" contentMode="center" backgroundImage="Border bit Lower" itemPositioning="centered" translatesAutoresizingMaskIntoConstraints="NO" id="pln-TS-69l">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="49" id="s6c-ZB-FYp"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem title="Edit Item" image="hammer.fill" catalog="system" id="KLr-s1-Ssi"/>
-                                    <tabBarItem title="Add Item" image="plus.square.fill" catalog="system" id="RmR-vI-Kd7"/>
-                                    <tabBarItem title="" image="Oven_item" landscapeImage="Oven_item" largeContentSizeImage="Oven_item" selectedImage="Oven_item" id="EVA-pv-ehk" userLabel="Oven">
-                                        <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                                        <inset key="largeContentSizeImageInsets" minX="0.0" minY="5" maxX="0.0" maxY="0.0"/>
-                                    </tabBarItem>
-                                    <tabBarItem title="Account" image="person.fill" catalog="system" id="W1u-vH-kxK"/>
-                                </items>
-                            </tabBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4N-xf-ZWJ" userLabel="Daily Special">
-                                <rect key="frame" x="157" y="68" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="AdE-jY-Qhk"/>
-                                    <constraint firstAttribute="width" constant="100" id="qN9-0A-FXb"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV5-K6-qsf">
+                                <rect key="frame" x="232" y="801" width="63" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Oven_item"/>
+                                <connections>
+                                    <segue destination="XTX-t9-jS2" kind="show" id="8UX-yg-dhJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ci5-DN-JUW">
+                                <rect key="frame" x="45" y="826" width="57" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="edit" image="hammer.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miv-IA-g4i">
+                                <rect key="frame" x="128" y="826" width="53" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add" image="plus.circle.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-9B-OUP">
+                                <rect key="frame" x="308" y="826" width="85" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Account" image="person.fill" catalog="system"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WwA-yo-fCC">
+                                <rect key="frame" x="134" y="98" width="146" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Daily Special" image="sun.min" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="y33-hg-oxV" kind="show" id="FrR-nu-bat"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.97533239879877576" blue="0.92044007674019179" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="pln-TS-69l" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="6Zq-uE-bpA"/>
-                            <constraint firstAttribute="trailing" secondItem="pln-TS-69l" secondAttribute="trailing" id="AnJ-JA-gug"/>
                             <constraint firstItem="euP-ub-Emb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DeG-yz-5Ql"/>
+                            <constraint firstItem="Zqk-WR-F71" firstAttribute="top" secondItem="WwA-yo-fCC" secondAttribute="bottom" constant="20" id="Dxf-p5-N8c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zqk-WR-F71" secondAttribute="trailing" constant="10" id="EgP-TK-otv"/>
-                            <constraint firstItem="pln-TS-69l" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="M5M-Ko-C46"/>
+                            <constraint firstItem="WwA-yo-fCC" firstAttribute="centerX" secondItem="2hu-m8-5SY" secondAttribute="centerX" id="IQR-28-3x5"/>
                             <constraint firstItem="2hu-m8-5SY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Mcs-Tv-agi"/>
-                            <constraint firstItem="97V-cn-JmD" firstAttribute="centerY" secondItem="2hu-m8-5SY" secondAttribute="centerY" id="MeN-OB-g8j"/>
                             <constraint firstItem="0cl-KQ-wHg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NHB-to-qJY"/>
                             <constraint firstItem="0cl-KQ-wHg" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="euP-ub-Emb" secondAttribute="top" constant="-650" id="Q65-Tm-eUv"/>
-                            <constraint firstItem="pln-TS-69l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qjf-WY-Nnb"/>
-                            <constraint firstItem="x4N-xf-ZWJ" firstAttribute="centerX" secondItem="2hu-m8-5SY" secondAttribute="centerX" id="SSn-Wy-IKY"/>
-                            <constraint firstItem="pln-TS-69l" firstAttribute="top" secondItem="Zqk-WR-F71" secondAttribute="bottom" constant="15" id="XyL-07-dc4"/>
                             <constraint firstItem="Zqk-WR-F71" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cs9-PI-Zzs"/>
-                            <constraint firstItem="pln-TS-69l" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dDh-r5-FmS"/>
                             <constraint firstItem="0cl-KQ-wHg" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-58" id="gDw-Vz-FtA"/>
                             <constraint firstItem="Zqk-WR-F71" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="110" id="gJb-6s-y8p"/>
-                            <constraint firstItem="x4N-xf-ZWJ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="iJR-on-xmh"/>
+                            <constraint firstItem="WwA-yo-fCC" firstAttribute="centerX" secondItem="2hu-m8-5SY" secondAttribute="centerX" id="hhl-Z6-UIQ"/>
                             <constraint firstItem="Zqk-WR-F71" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lwy-Ir-96s"/>
-                            <constraint firstItem="euP-ub-Emb" firstAttribute="top" secondItem="x4N-xf-ZWJ" secondAttribute="bottom" constant="593" id="oWB-4d-sHJ"/>
-                            <constraint firstItem="x4N-xf-ZWJ" firstAttribute="centerY" secondItem="2hu-m8-5SY" secondAttribute="centerY" id="q3a-ET-Lo4"/>
-                            <constraint firstItem="97V-cn-JmD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="tRx-An-nbf"/>
+                            <constraint firstItem="Zqk-WR-F71" firstAttribute="top" secondItem="WwA-yo-fCC" secondAttribute="bottom" constant="20" id="uC3-3n-dxW"/>
                             <constraint firstItem="2hu-m8-5SY" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="w45-yJ-GS8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -134,7 +131,7 @@
             </objects>
             <point key="canvasLocation" x="1900.0000000000002" y="374.33035714285711"/>
         </scene>
-        <!--Oven WindowVC-->
+        <!--Item-->
         <scene sceneID="NnT-dx-287">
             <objects>
                 <viewController id="XTX-t9-jS2" customClass="Oven_WindowVC" sceneMemberID="viewController">
@@ -142,24 +139,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[OVEN VIEW]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaS-9S-hfH">
-                                <rect key="frame" x="10" y="95" width="381" height="211"/>
+                            <view contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z54-Xe-fVj">
+                                <rect key="frame" x="1" y="1" width="400" height="400"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="61"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[OVEN VIEW]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qaS-9S-hfH">
+                                        <rect key="frame" x="10" y="189" width="381" height="211"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="61"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="L1s-Fy-Cus"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="kNe-a3-ZZR"/>
+                    <navigationItem key="navigationItem" id="0HD-XD-qEG"/>
                     <size key="freeformSize" width="400" height="400"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d2N-T2-7j6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2570" y="-4"/>
+            <point key="canvasLocation" x="2861" y="541"/>
         </scene>
-        <!--Detail PageVC-->
+        <!--Item-->
         <scene sceneID="Ubk-5f-DQd">
             <objects>
                 <viewController id="y33-hg-oxV" customClass="DetailPageVC" sceneMemberID="viewController">
@@ -178,23 +184,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Uiq-cG-hEh"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="FH0-h4-sZO"/>
+                    <navigationItem key="navigationItem" id="jly-s5-GQa"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="400"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zU-tQ-B5Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1186" y="70"/>
+            <point key="canvasLocation" x="2861" y="208"/>
         </scene>
     </scenes>
     <resources>
         <image name="Border Bit Upper.png" width="216" height="82"/>
-        <image name="Border bit Lower" width="216" height="78"/>
         <image name="Border bit Lower.png" width="216" height="78"/>
         <image name="Icon Bit.png" width="68" height="68"/>
         <image name="Oven_item" width="63" height="73"/>
         <image name="doc" catalog="system" width="56" height="64"/>
         <image name="hammer.fill" catalog="system" width="64" height="56"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
-        <image name="plus.square.fill" catalog="system" width="64" height="56"/>
+        <image name="plus.circle.fill" catalog="system" width="64" height="60"/>
+        <image name="sun.min" catalog="system" width="64" height="60"/>
     </resources>
 </document>
