@@ -12,9 +12,10 @@ class MainVC: UIViewController {
     
     
     @IBOutlet weak var Oven_button: UIButton!
+    
     class Collection_access: UICollectionViewController{
-        @IBOutlet weak var Collection: UICollectionView!
-        @IBOutlet weak var Item: UICollectionView!
+        
+        
     }
     override func viewDidLoad() {
         super.viewDidLoad()

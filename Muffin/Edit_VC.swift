@@ -12,13 +12,10 @@ class Edit_VC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        Description.delegate = self;
-        Ingredients.delegate = self;
         // Do any additional setup after loading the view.
     }
     
-    @IBOutlet weak var Description: UITextField!
-    @IBOutlet weak var Ingredients: UITextField!
+    
     //@IBOutlet var ImageTap: UITapGestureRecognizer!
     /*
     @IBAction func change_Image(sender: CIImageAutoAdjustmentOption){

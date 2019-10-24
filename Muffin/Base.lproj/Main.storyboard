@@ -23,8 +23,8 @@
                                     <constraint firstAttribute="width" constant="417" id="aKq-By-h2q"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-WR-F71" userLabel="Collection">
-                                <rect key="frame" x="10" y="154" width="394" height="708"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-WR-F71" userLabel="Collection">
+                                <rect key="frame" x="10" y="153" width="394" height="708"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tp3-Fd-PIw">
                                     <size key="itemSize" width="107" height="107"/>
@@ -40,13 +40,6 @@
                                             <rect key="frame" x="0.0" y="0.0" width="107" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hbx-ya-CLI" userLabel="[Item]">
-                                                    <rect key="frame" x="-136" y="-270" width="378" height="647"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-IZ-WNh">
                                                     <rect key="frame" x="-67" y="-11" width="240" height="128"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -134,8 +127,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="Collection" destination="Zqk-WR-F71" id="xLC-9t-50a"/>
-                        <outlet property="Item" destination="Zqk-WR-F71" id="UVr-sc-LxY"/>
                         <outlet property="Oven_button" destination="gV5-K6-qsf" id="Dfq-nC-5RF"/>
                     </connections>
                 </viewController>
@@ -285,11 +276,6 @@
                                 <accessibility key="accessibilityConfiguration" label="Ingredients"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="Ingre:" destination="CDp-ME-4Eg" eventType="editingDidEnd" id="N2m-Ux-rAk"/>
-                                    <action selector="Ingredients:" destination="CDp-ME-4Eg" eventType="editingDidEnd" id="dRW-TQ-2X4"/>
-                                    <action selector="change_ImageWithSender:" destination="CDp-ME-4Eg" eventType="editingDidEnd" id="wxM-2a-fye"/>
-                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Description, edit mode" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5zM-hC-HGH" userLabel="Description Field">
                                 <rect key="frame" x="10" y="272" width="380" height="108"/>
@@ -298,16 +284,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="Description:" destination="CDp-ME-4Eg" eventType="editingDidEnd" id="lQx-8P-gfU"/>
+                                    <action selector="Description:" destination="CDp-ME-4Eg" eventType="editingDidEnd" id="wjw-ks-TjN"/>
                                 </connections>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gzf-7g-Gnj">
                                 <rect key="frame" x="10" y="96" width="168" height="168"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="lta-H9-JHN" appends="YES" id="mEG-hc-vPl"/>
-                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -317,11 +300,6 @@
                     <navigationItem key="navigationItem" id="bwl-8r-w9A"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="400" height="400"/>
-                    <connections>
-                        <outlet property="Description" destination="5zM-hC-HGH" id="sTE-lE-gkQ"/>
-                        <outlet property="ImageTap" destination="lta-H9-JHN" id="Vev-Ls-gEG"/>
-                        <outlet property="Ingredients" destination="4pz-qd-r5f" id="wMZ-fV-V1E"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2NG-kx-tTD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="lta-H9-JHN" userLabel="ImageTap"/>
