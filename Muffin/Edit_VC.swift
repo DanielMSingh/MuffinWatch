@@ -16,21 +16,6 @@ class Edit_VC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDel
     }
     
     
-    //@IBOutlet var ImageTap: UITapGestureRecognizer!
-    /*
-    @IBAction func change_Image(sender: CIImageAutoAdjustmentOption){
-        // Hide the keyboard.
-        Ingredients.resignFirstResponder();
-        Description.resignFirstResponder();
-        // UIImagePickerController is a view controller that lets a user pick media from their photo library.
-        let imagePickerController = UIImagePickerController();
-        imagePickerController.sourceType = .photoLibrary;
-        imagePickerController.delegate = Edit_VC;
-        present(imagePickerController, animated: true, completion: nil)
-        
-        
-    }
-*/
     /*
     // MARK: - Navigation
 

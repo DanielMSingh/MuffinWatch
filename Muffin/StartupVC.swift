@@ -1,30 +1,21 @@
 //
-//  MainVC.swift
+//  StartupVC.swift
 //  Muffin
 //
-//  Created by Daniel Singh on 10/8/19.
+//  Created by Daniel Singh on 10/24/19.
 //  Copyright © 2019 Daniel Singh. All rights reserved.
 //
 
 import UIKit
 
-class MainVC: UIViewController {
-    
-    
-    @IBOutlet weak var Oven_button: UIButton!
-    //Oven should force the user to either click a collection item to headstart the oven or click the oven to cancel.
+class StartupVC: UIViewController {
 
-    
-    
-    class Collection_access: UICollectionViewController{}
+    @IBAction func ToStoreMain(_ sender: Any) {
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Do any additional setup after loading the view.
-        
-    
-        
-        
     }
     
 

@@ -8,9 +8,48 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Startup-->
+        <scene sceneID="jod-MZ-ehT">
+            <objects>
+                <viewController id="tuc-wc-oUl" userLabel="Startup" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="knj-Ek-65i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h1-D9-hjV" userLabel="StoreOwner">
+                                <rect key="frame" x="20" y="261" width="374" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Store Owner" image="Icon Bit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="ToStoreMain:" destination="DaC-NF-IoS" eventType="touchUpInside" id="XFk-bw-nKa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qsq-2b-mCH">
+                                <rect key="frame" x="20" y="449" width="374" height="68"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Customer" image="Icon Bit">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Kza-PE-5Zz"/>
+                    </view>
+                    <connections>
+                        <outlet property="view" destination="9h1-D9-hjV" id="PfU-6m-wel"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pnr-Oq-rAP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="DaC-NF-IoS" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="374"/>
+        </scene>
         <!--MainVC-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="01J-lp-oVM" customClass="MainVC" customModule="Muffin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -33,20 +72,24 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="pastrycell" id="B4u-qd-JsY">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PastryCollectionViewCell" id="B4u-qd-JsY" customClass="PastryCollectionViewCell" customModule="Muffin" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="107" height="107"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ZeJ-a5-LDr">
                                             <rect key="frame" x="0.0" y="0.0" width="107" height="107"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-IZ-WNh">
-                                                    <rect key="frame" x="-67" y="-11" width="240" height="128"/>
+                                                <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="NQD-IZ-WNh">
+                                                    <rect key="frame" x="0.0" y="2" width="107" height="105"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="107" height="107"/>
+                                        <connections>
+                                            <outlet property="PastryImage" destination="NQD-IZ-WNh" id="tj3-WE-weo"/>
+                                            <outlet property="Pastry_Image" destination="NQD-IZ-WNh" id="pSf-nW-aFN"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -71,7 +114,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="edit" image="hammer.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="CDp-ME-4Eg" kind="show" id="1PW-kN-uRa"/>
+                                    <segue destination="CDp-ME-4Eg" kind="showDetail" id="1PW-kN-uRa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miv-IA-g4i">
@@ -79,7 +122,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add" image="plus.circle.fill" catalog="system"/>
                                 <connections>
-                                    <segue destination="CDp-ME-4Eg" kind="show" id="h8k-u2-e4h"/>
+                                    <segue destination="CDp-ME-4Eg" kind="showDetail" id="h8k-u2-e4h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKb-9B-OUP">
@@ -94,7 +137,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="y33-hg-oxV" kind="show" id="FrR-nu-bat"/>
+                                    <segue destination="y33-hg-oxV" kind="showDetail" id="FrR-nu-bat"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV5-K6-qsf">
@@ -102,7 +145,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Oven_item"/>
                                 <connections>
-                                    <segue destination="XTX-t9-jS2" kind="show" id="8UX-yg-dhJ"/>
+                                    <segue destination="XTX-t9-jS2" kind="showDetail" id="8UX-yg-dhJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,11 +169,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Yb3-6I-UqM"/>
                     <connections>
                         <outlet property="Oven_button" destination="gV5-K6-qsf" id="Dfq-nC-5RF"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1900.0000000000002" y="374.33035714285711"/>
         </scene>
@@ -310,6 +353,7 @@
     <resources>
         <image name="Border Bit Upper" width="216" height="82"/>
         <image name="Border bit Lower" width="216" height="78"/>
+        <image name="Icon Bit" width="68" height="68"/>
         <image name="Icon Bit.png" width="68" height="68"/>
         <image name="Oven_item" width="63" height="73"/>
         <image name="arrowtriangle.down.fill" catalog="system" width="64" height="62"/>
@@ -321,6 +365,6 @@
         <image name="sun.min" catalog="system" width="64" height="60"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="h8k-u2-e4h"/>
+        <segue reference="1PW-kN-uRa"/>
     </inferredMetricsTieBreakers>
 </document>
