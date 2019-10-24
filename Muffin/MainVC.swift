@@ -10,14 +10,20 @@ import UIKit
 
 class MainVC: UIViewController {
     
-    @IBOutlet weak var OvenButton: UITabBarItem!
     
+    @IBOutlet weak var Oven_button: UIButton!
+    class Collection_access: UICollectionViewController{
+        @IBOutlet weak var Collection: UICollectionView!
+        @IBOutlet weak var Item: UICollectionView!
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
     
+        
+        
     }
     
 

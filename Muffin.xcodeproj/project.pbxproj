@@ -12,12 +12,12 @@
 		372DCFCE2343092300EC62ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCD2343092300EC62ED /* SceneDelegate.swift */; };
 		372DCFD32343092300EC62ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD12343092300EC62ED /* Main.storyboard */; };
 		372DCFD52343092400EC62ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD42343092400EC62ED /* Assets.xcassets */; };
-		372DCFD82343092400EC62ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD62343092400EC62ED /* LaunchScreen.storyboard */; };
 		372DCFE32343092400EC62ED /* MuffinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFE22343092400EC62ED /* MuffinTests.swift */; };
 		372DCFEE2343092400EC62ED /* MuffinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFED2343092400EC62ED /* MuffinUITests.swift */; };
 		372DCFFC234309DF00EC62ED /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFFB234309DF00EC62ED /* Assets */; };
 		373D6AE6234D3B880047731D /* DetailPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D6AE5234D3B880047731D /* DetailPageVC.swift */; };
 		373D6AE8234D3BFD0047731D /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D6AE7234D3BFD0047731D /* MainVC.swift */; };
+		378CD0D7235424490055F8A6 /* Edit_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CD0D6235424490055F8A6 /* Edit_VC.swift */; };
 		37BAFAAE234CF4EE00099B2F /* Pastry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAFAAD234CF4EE00099B2F /* Pastry.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,6 @@
 		372DCFCD2343092300EC62ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		372DCFD22343092300EC62ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		372DCFD42343092400EC62ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		372DCFD72343092400EC62ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		372DCFD92343092400EC62ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372DCFDE2343092400EC62ED /* MuffinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MuffinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		372DCFE22343092400EC62ED /* MuffinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuffinTests.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		372DCFFB234309DF00EC62ED /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
 		373D6AE5234D3B880047731D /* DetailPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageVC.swift; sourceTree = "<group>"; };
 		373D6AE7234D3BFD0047731D /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		378CD0D6235424490055F8A6 /* Edit_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edit_VC.swift; sourceTree = "<group>"; };
 		37BAFAAD234CF4EE00099B2F /* Pastry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pastry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,10 +113,10 @@
 				373D6AE7234D3BFD0047731D /* MainVC.swift */,
 				370F2866234D1D86001122B3 /* Oven_WindowVC.swift */,
 				372DCFD12343092300EC62ED /* Main.storyboard */,
+				378CD0D6235424490055F8A6 /* Edit_VC.swift */,
 				373D6AE5234D3B880047731D /* DetailPageVC.swift */,
 				372DCFD42343092400EC62ED /* Assets.xcassets */,
 				372DCFFB234309DF00EC62ED /* Assets */,
-				372DCFD62343092400EC62ED /* LaunchScreen.storyboard */,
 				372DCFD92343092400EC62ED /* Info.plist */,
 			);
 			path = Muffin;
@@ -244,7 +244,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				372DCFD82343092400EC62ED /* LaunchScreen.storyboard in Resources */,
 				372DCFFC234309DF00EC62ED /* Assets in Resources */,
 				372DCFD52343092400EC62ED /* Assets.xcassets in Resources */,
 				372DCFD32343092300EC62ED /* Main.storyboard in Resources */,
@@ -276,6 +275,7 @@
 				373D6AE8234D3BFD0047731D /* MainVC.swift in Sources */,
 				373D6AE6234D3B880047731D /* DetailPageVC.swift in Sources */,
 				370F2867234D1D86001122B3 /* Oven_WindowVC.swift in Sources */,
+				378CD0D7235424490055F8A6 /* Edit_VC.swift in Sources */,
 				37BAFAAE234CF4EE00099B2F /* Pastry.swift in Sources */,
 				372DCFCE2343092300EC62ED /* SceneDelegate.swift in Sources */,
 			);
@@ -319,14 +319,6 @@
 				372DCFD22343092300EC62ED /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		372DCFD62343092400EC62ED /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				372DCFD72343092400EC62ED /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
