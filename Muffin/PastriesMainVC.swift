@@ -1,5 +1,5 @@
 //
-//  PastryCollectionViewController.swift
+//  PastriesVC.swift
 //  Muffin
 //
 //  Created by Daniel Singh on 10/24/19.
@@ -8,27 +8,19 @@
 
 import UIKit
 
-private let reuseIdentifier = "PastryCollectionViewCell"
+private let reuseIdentifier = "PastryCVCell"
 
-class PastryCollectionViewController: UICollectionViewController{
+class PastriesMainVC: UICollectionViewController{
     //add and edit shouldwork on this array:
     var pastries = [Pastry]()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         loadDefaults()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
+        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Register cell classes
-       /* self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-*/
-        // Do any additional setup after loading the view.
-        
-        
-        
     }
 
     /*
@@ -54,7 +46,7 @@ class PastryCollectionViewController: UICollectionViewController{
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PastryCollectionViewCell else{fatalError("The dequeued cell is not an instance of PastryCollectionViewCell.")}
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PastryCVCell else{fatalError("The dequeued cell is not an instance of PastryCVCell.")}
         let pastry=pastries[indexPath.item]
         cell.Pastry_Image.image=pastry.Item_pic
         // Configure the cell

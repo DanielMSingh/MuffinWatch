@@ -8,25 +8,66 @@
 
 import UIKit
 
-class MainVC: UIViewController {
+class MainVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+
+    //private let reuseIdentifier = "PastryCVCell"
+
+    var pastries = [Pastry]()
     
     
+    @IBOutlet weak var Pastries: UICollectionView!
     @IBOutlet weak var Oven_button: UIButton!
     //Oven should force the user to either click a collection item to headstart the oven or click the oven to cancel.
-
     
-    
-    class Collection_access: UICollectionViewController{}
     override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
-        
-    
-        
-        
+           super.viewDidLoad()
+        loadDefaults()
+        //Pastries.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "PastryCVCell")
+
+        Pastries.delegate=self
+        Pastries.dataSource=self
+    }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return pastries.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = Pastries.dequeueReusableCell(withReuseIdentifier:"PastryCVCell",for: indexPath) as! PastryCVCell
+        let pastry=pastries[indexPath.item]
+        cell.Pastry_Image.image=pastry.Item_pic
+        return cell
+    }
+    /*
+    func collectionView(_ Pastries: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = Pastries.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PastryCVCell else{fatalError("The dequeued cell is not an instance of PastryCVCell.")}
+        let pastry=pastries[indexPath.item]
+        cell.Pastry_Image.image=pastry.Item_pic
+        // Configure the cell
+    
+        return cell
+    }*/
+    
+    private func loadDefaults(){
+        let photo1=UIImage(named: "Blueberry_Muffin")
+        let photo2=UIImage(named:"Scone")
+        let photo3=UIImage(named:"Brownie")
+    
+    
+        guard let pastry1 = Pastry(Item_name: "Blueberry Muffin", Item_quantity: 3, Item_description: "A muffin with blueberries", Item_pic: photo1, Bake_time: 300)
+        else {fatalError("unable to create pastry")}
+        guard let pastry2 = Pastry(Item_name: "Scone", Item_quantity: 7, Item_description: "Basically an english muffin?", Item_pic: photo2, Bake_time: 600)
+        else {fatalError("unable to create pastry")}
+        guard let pastry3 = Pastry(Item_name: "Brownie", Item_quantity: 12, Item_description: "Bruh, you know what a brownie is", Item_pic: photo3, Bake_time: 300)
+        else {fatalError("unable to create pastry")}
+        pastries+=[pastry1,pastry2,pastry3]
+    }
 
     /*
     // MARK: - Navigation
