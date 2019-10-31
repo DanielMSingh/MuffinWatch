@@ -32,11 +32,12 @@ class MainVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return 1//essentially the amount of collections
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pastries.count
+        return pastries.count//amount of cells
     }
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = Pastries.dequeueReusableCell(withReuseIdentifier:"PastryCVCell",for: indexPath) as! PastryCVCell

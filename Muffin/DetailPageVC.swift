@@ -13,9 +13,12 @@
 import UIKit
 
 class DetailPageVC: UIViewController {
-
+    //for the view
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
         
         // Do any additional setup after loading the view.
     }
