@@ -7,12 +7,12 @@
 //
 
 import UIKit
+var pastries = [Pastry]()
 
 class MainVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
     //private let reuseIdentifier = "PastryCVCell"
 
-    var pastries = [Pastry]()
     
     
     @IBOutlet weak var Pastries: UICollectionView!
