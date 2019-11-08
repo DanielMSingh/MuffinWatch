@@ -1,5 +1,5 @@
 //
-//  Edit_VC.swift
+//  Add_VC.swift
 //  Muffin
 //
 //  Created by Daniel Singh on 10/13/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Edit: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class Add: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     //var Interaction = ""
     
     @IBOutlet weak var InteractionLabel: UILabel!
