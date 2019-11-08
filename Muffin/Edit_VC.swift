@@ -8,32 +8,59 @@
 
 import UIKit
 
-class Edit_VC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class Edit: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    //var Interaction = ""
     
-    @IBOutlet weak var Interaction: UILabel!
+    @IBOutlet weak var InteractionLabel: UILabel!
     @IBOutlet weak var ItemName: UITextField!
     @IBOutlet weak var ItemDescription: UITextField!
     @IBOutlet weak var ItemImage: UIImageView!
     @IBOutlet weak var BakeTime: UITextField!
     
-    //differentiate the Interaction based on which segue was called using the 'Prepare for Segue'
     
+    //for the image selection:
+    var Picker: Images!
     
+    let imagePicker=UIImagePickerController()
+    @IBAction func ImageBtn(_ sender: Any) {
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated:true, completion: nil)
+    }
     @IBAction func Submit(_ sender: Any) {
-        if (Interaction.text=="Add Item"){
-            guard let pastry = Pastry(Item_name: ItemName.text!, Item_quantity: 0, Item_description: ItemDescription.text!, Item_pic: ItemImage.image!, Bake_time:300)
+        //if (Interaction=="Add"||Interaction==""){
+            //InteractionLabel.text = "Add Item"
+        var img = UIImage(named: "img_Default")
+        let Btime:Int! = Int(BakeTime.text!)
+            //do necessary calculations on Btime to make it accurate
+            //if it's a minute:second timer, calculate time in seconds here
+        guard let name = ItemName.text, !name.isEmpty else {return}
+        guard let description = ItemDescription.text, !description.isEmpty else {return}
+        if (!(ItemImage.image==nil))
+            {img = ItemImage.image}
+        guard let pastry = Pastry(Item_name: name, Item_quantity: 0, Item_description: description, Item_pic: img, Bake_time:Btime)
                    else {fatalError("unable to create pastry")}
             pastries.append(pastry)
-        }
-        else if (Interaction.text=="Edit Item"){
+        //}
+        ItemName.text=nil
+        ItemDescription.text=nil
+        ItemImage.image=nil
+        BakeTime=nil
+        
             //take reference of the item to be edited
-        }
-        else {fatalError("Invalid interaction")}
+            //set all fields as the current data for the item to be edited
+            //edit the item
+            //may need to have some built-in reference to find the pastry and overwrite it
+            
+            //most likely, have a way to select the collection and while the item is selected,
+        
+        
     }
+    @IBOutlet weak var Submit: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        imagePicker.delegate=self
         // Do any additional setup after loading the view.
     }
     
@@ -47,4 +74,10 @@ class Edit_VC: UIViewController, UITextFieldDelegate, UIImagePickerControllerDel
     }
     */
 
+}
+extension Edit: ImagePickerDelegate {
+
+    func didSelect(image: UIImage?) {
+        self.ItemImage.image = image
+    }
 }

@@ -32,17 +32,17 @@ class MuffinTests: XCTestCase {
     }
     //pastry initialisation tests:
     func testPastryInitFail(){
-        let namelessPastry = Pastry.init(Item_name:"", Item_quantity:0, Item_description:"Nameless", Item_pic:nil,Bake_time:5.00)
+        let namelessPastry = Pastry.init(Item_name:"", Item_quantity:0, Item_description:"Nameless", Item_pic:nil,Bake_time:300)
         XCTAssertNil(namelessPastry)
-        let noDescriptionPastry = Pastry.init(Item_name:"noDescription", Item_quantity:0, Item_description:"", Item_pic:nil, Bake_time:5.00)
+        let noDescriptionPastry = Pastry.init(Item_name:"noDescription", Item_quantity:0, Item_description:"", Item_pic:nil, Bake_time:300)
         XCTAssertNil(noDescriptionPastry)
-        let negativeQuantity = Pastry.init(Item_name:"negativeQ", Item_quantity:-1,Item_description: "less than 0", Item_pic:nil, Bake_time:5.00)
+        let negativeQuantity = Pastry.init(Item_name:"negativeQ", Item_quantity:-1,Item_description: "less than 0", Item_pic:nil, Bake_time:300)
         XCTAssertNil(negativeQuantity)
-        let negativeTime = Pastry.init(Item_name: "-Time", Item_quantity: 0, Item_description: "-Time", Item_pic: nil, Bake_time:-0.1)
+        let negativeTime = Pastry.init(Item_name: "-Time", Item_quantity: 0, Item_description: "-Time", Item_pic: nil, Bake_time:-1)
         XCTAssertNil(negativeTime)
     }
     func testPastryInitSucceed(){
-        let goodPastry = Pastry.init(Item_name:"Goodone", Item_quantity:0, Item_description:"the good one", Item_pic: nil, Bake_time:5.00)
+        let goodPastry = Pastry.init(Item_name:"Goodone", Item_quantity:0, Item_description:"the good one", Item_pic: nil, Bake_time:300)
         XCTAssertNotNil(goodPastry)
     }
 

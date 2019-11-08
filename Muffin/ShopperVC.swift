@@ -9,10 +9,11 @@
 import UIKit
 
 class ShopperVC: UIViewController {
-
+    //copy most of the stuff from Main.swift;
+    //for like the collectionview, etc.
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     

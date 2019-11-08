@@ -9,23 +9,27 @@
 import UIKit
 var pastries = [Pastry]()
 
-class MainVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class Main: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
     //private let reuseIdentifier = "PastryCVCell"
 
     
-    
     @IBOutlet weak var Pastries: UICollectionView!
-    @IBOutlet weak var Oven_button: UIButton!
     //Oven should force the user to either click a collection item to headstart the oven or click the oven to cancel.
     
     override func viewDidLoad() {
            super.viewDidLoad()
-        loadDefaults()
+        
+        
+        if (pastries.isEmpty){loadDefaults()}//load defaults if it's completely empty. otherwise doesn't
+        //!!Delete after add, edit and oven are done.
+        
+        
         //Pastries.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "PastryCVCell")
 
         Pastries.delegate=self
         Pastries.dataSource=self
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,8 +47,13 @@ class MainVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
         let cell = Pastries.dequeueReusableCell(withReuseIdentifier:"PastryCVCell",for: indexPath) as! PastryCVCell
         let pastry=pastries[indexPath.item]
         cell.Pastry_Image.image=pastry.Item_pic
+        cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: 300, height: 300)
         return cell
     }
+    func collectionview(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItematIndexPath indexPath: IndexPath)->CGSize{
+        return CGSize(width:CGFloat(10000), height:CGFloat(10000))
+    }
+    
     /*
     func collectionView(_ Pastries: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = Pastries.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PastryCVCell else{fatalError("The dequeued cell is not an instance of PastryCVCell.")}
@@ -56,9 +65,9 @@ class MainVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSour
     }*/
     
     private func loadDefaults(){
-        let photo1=UIImage(named: "Blueberry_Muffin")
-        let photo2=UIImage(named:"Scone")
-        let photo3=UIImage(named:"Brownie")
+        let photo1=UIImage(named:"img_Blueberry_Muffin")
+        let photo2=UIImage(named:"img_Scone")
+        let photo3=UIImage(named:"img_Brownie")
     
     
         guard let pastry1 = Pastry(Item_name: "Blueberry Muffin", Item_quantity: 3, Item_description: "A muffin with blueberries", Item_pic: photo1, Bake_time: 300)
