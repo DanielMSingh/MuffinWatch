@@ -19,13 +19,12 @@ class Edit: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelega
     
     
     //for the image selection:
-    var Picker: Images!
-    
     let imagePicker=UIImagePickerController()
     @IBAction func ImageBtn(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated:true, completion: nil)
-    }
+    }//ImageButton
+    
     @IBAction func Submit(_ sender: Any) {
         //if (Interaction=="Add"||Interaction==""){
             //InteractionLabel.text = "Add Item"
@@ -52,9 +51,7 @@ class Edit: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelega
             //may need to have some built-in reference to find the pastry and overwrite it
             
             //most likely, have a way to select the collection and while the item is selected,
-        
-        
-    }
+    }//Submit
     @IBOutlet weak var Submit: UIButton!
     
     
@@ -62,8 +59,16 @@ class Edit: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelega
         super.viewDidLoad()
         imagePicker.delegate=self
         // Do any additional setup after loading the view.
-    }
+    }//viewDidLoad
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            ItemImage.contentMode = .scaleAspectFit
+            ItemImage.image = pickedImage
+        }
+     
+        dismiss(animated: true, completion: nil)
+    }//imagePickerController
     /*
     // MARK: - Navigation
 
@@ -74,10 +79,4 @@ class Edit: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelega
     }
     */
 
-}
-extension Edit: ImagePickerDelegate {
-
-    func didSelect(image: UIImage?) {
-        self.ItemImage.image = image
-    }
 }
