@@ -37,6 +37,7 @@ class Add: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegat
         if (!(ItemImage.image==nil))
             {img = ItemImage.image}
         guard let pastry = Pastry(Item_name: name, Item_quantity: 0, Item_description: description, Item_pic: img, Bake_time:Btime)
+            //index is set to the number of pastries in the list; i.e. if empty, then 0
                    else {fatalError("unable to create pastry")}
             pastries.append(pastry)
         //}

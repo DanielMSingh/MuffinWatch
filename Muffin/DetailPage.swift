@@ -12,16 +12,15 @@
 
 import UIKit
 
-class DetailPageVC: UIViewController {
+class DetailPage: UIViewController {
     //for the view
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        
-        
         // Do any additional setup after loading the view.
     }
+    //in the collectionview, show all the items in [pastries].
+    //do all the same stuff for the detail view that was done in the main for edit segue.
+    
     
     //first thing first, make the button work to activate this. 
 }

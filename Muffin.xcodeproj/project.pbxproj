@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		370F2867234D1D86001122B3 /* Oven_WindowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F2866234D1D86001122B3 /* Oven_WindowVC.swift */; };
+		370F2867234D1D86001122B3 /* Oven_Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370F2866234D1D86001122B3 /* Oven_Window.swift */; };
 		372DCFCC2343092300EC62ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCB2343092300EC62ED /* AppDelegate.swift */; };
 		372DCFCE2343092300EC62ED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFCD2343092300EC62ED /* SceneDelegate.swift */; };
 		372DCFD32343092300EC62ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFD12343092300EC62ED /* Main.storyboard */; };
@@ -15,13 +15,14 @@
 		372DCFE32343092400EC62ED /* MuffinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFE22343092400EC62ED /* MuffinTests.swift */; };
 		372DCFEE2343092400EC62ED /* MuffinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 372DCFED2343092400EC62ED /* MuffinUITests.swift */; };
 		372DCFFC234309DF00EC62ED /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = 372DCFFB234309DF00EC62ED /* Assets */; };
-		373D6AE6234D3B880047731D /* DetailPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D6AE5234D3B880047731D /* DetailPageVC.swift */; };
+		373D6AE6234D3B880047731D /* DetailPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D6AE5234D3B880047731D /* DetailPage.swift */; };
 		373D6AE8234D3BFD0047731D /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373D6AE7234D3BFD0047731D /* Main.swift */; };
-		378CD0D7235424490055F8A6 /* Add_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CD0D6235424490055F8A6 /* Add_VC.swift */; };
+		378CD0D7235424490055F8A6 /* Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378CD0D6235424490055F8A6 /* Add.swift */; };
 		37AECD5E2361641100FC81C1 /* PastryCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AECD5D2361641100FC81C1 /* PastryCVCell.swift */; };
 		37AECD6023616EB700FC81C1 /* StartupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AECD5F23616EB700FC81C1 /* StartupVC.swift */; };
 		37BAFAAE234CF4EE00099B2F /* Pastry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37BAFAAD234CF4EE00099B2F /* Pastry.swift */; };
-		37EA54ED236A9B9E002A8556 /* ShopperVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA54EC236A9B9E002A8556 /* ShopperVC.swift */; };
+		37EA54ED236A9B9E002A8556 /* Shopper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EA54EC236A9B9E002A8556 /* Shopper.swift */; };
+		37F9ACF323972D8900D80832 /* Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F9ACF223972D8900D80832 /* Edit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		370F2866234D1D86001122B3 /* Oven_WindowVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oven_WindowVC.swift; sourceTree = "<group>"; };
+		370F2866234D1D86001122B3 /* Oven_Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Oven_Window.swift; sourceTree = "<group>"; };
 		372DCFC82343092300EC62ED /* Muffin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muffin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		372DCFCB2343092300EC62ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		372DCFCD2343092300EC62ED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,13 +57,14 @@
 		372DCFED2343092400EC62ED /* MuffinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MuffinUITests.swift; sourceTree = "<group>"; };
 		372DCFEF2343092400EC62ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		372DCFFB234309DF00EC62ED /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets; sourceTree = "<group>"; };
-		373D6AE5234D3B880047731D /* DetailPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageVC.swift; sourceTree = "<group>"; };
+		373D6AE5234D3B880047731D /* DetailPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPage.swift; sourceTree = "<group>"; };
 		373D6AE7234D3BFD0047731D /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
-		378CD0D6235424490055F8A6 /* Add_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add_VC.swift; sourceTree = "<group>"; };
+		378CD0D6235424490055F8A6 /* Add.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Add.swift; sourceTree = "<group>"; };
 		37AECD5D2361641100FC81C1 /* PastryCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastryCVCell.swift; sourceTree = "<group>"; };
 		37AECD5F23616EB700FC81C1 /* StartupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartupVC.swift; sourceTree = "<group>"; };
 		37BAFAAD234CF4EE00099B2F /* Pastry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pastry.swift; sourceTree = "<group>"; };
-		37EA54EC236A9B9E002A8556 /* ShopperVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopperVC.swift; sourceTree = "<group>"; };
+		37EA54EC236A9B9E002A8556 /* Shopper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shopper.swift; sourceTree = "<group>"; };
+		37F9ACF223972D8900D80832 /* Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,11 +121,12 @@
 				373D6AE7234D3BFD0047731D /* Main.swift */,
 				37AECD5D2361641100FC81C1 /* PastryCVCell.swift */,
 				37AECD5F23616EB700FC81C1 /* StartupVC.swift */,
-				370F2866234D1D86001122B3 /* Oven_WindowVC.swift */,
+				370F2866234D1D86001122B3 /* Oven_Window.swift */,
 				372DCFD12343092300EC62ED /* Main.storyboard */,
-				37EA54EC236A9B9E002A8556 /* ShopperVC.swift */,
-				378CD0D6235424490055F8A6 /* Add_VC.swift */,
-				373D6AE5234D3B880047731D /* DetailPageVC.swift */,
+				37EA54EC236A9B9E002A8556 /* Shopper.swift */,
+				378CD0D6235424490055F8A6 /* Add.swift */,
+				373D6AE5234D3B880047731D /* DetailPage.swift */,
+				37F9ACF223972D8900D80832 /* Edit.swift */,
 				372DCFD42343092400EC62ED /* Assets.xcassets */,
 				372DCFFB234309DF00EC62ED /* Assets */,
 				372DCFD92343092400EC62ED /* Info.plist */,
@@ -280,14 +283,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37EA54ED236A9B9E002A8556 /* ShopperVC.swift in Sources */,
+				37EA54ED236A9B9E002A8556 /* Shopper.swift in Sources */,
+				37F9ACF323972D8900D80832 /* Edit.swift in Sources */,
 				372DCFCC2343092300EC62ED /* AppDelegate.swift in Sources */,
 				373D6AE8234D3BFD0047731D /* Main.swift in Sources */,
-				373D6AE6234D3B880047731D /* DetailPageVC.swift in Sources */,
+				373D6AE6234D3B880047731D /* DetailPage.swift in Sources */,
 				37AECD5E2361641100FC81C1 /* PastryCVCell.swift in Sources */,
 				37AECD6023616EB700FC81C1 /* StartupVC.swift in Sources */,
-				370F2867234D1D86001122B3 /* Oven_WindowVC.swift in Sources */,
-				378CD0D7235424490055F8A6 /* Add_VC.swift in Sources */,
+				370F2867234D1D86001122B3 /* Oven_Window.swift in Sources */,
+				378CD0D7235424490055F8A6 /* Add.swift in Sources */,
 				37BAFAAE234CF4EE00099B2F /* Pastry.swift in Sources */,
 				372DCFCE2343092300EC62ED /* SceneDelegate.swift in Sources */,
 			);
@@ -455,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL8ZU484HP;
 				INFOPLIST_FILE = Muffin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -472,6 +477,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZL8ZU484HP;
 				INFOPLIST_FILE = Muffin/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -8,11 +8,13 @@
 
 import UIKit
 var pastries = [Pastry]()
-
-class Main: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+var pastryindex = -1
+//var Special = pastries[0]//placeholder
+class Main: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     //private let reuseIdentifier = "PastryCVCell"
 
+    
     
     @IBOutlet weak var Pastries: UICollectionView!
     //Oven should force the user to either click a collection item to headstart the oven or click the oven to cancel.
@@ -49,10 +51,17 @@ class Main: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
         cell.Pastry_Image.image=pastry.Item_pic
         cell.frame = CGRect(x: cell.frame.origin.x, y: cell.frame.origin.y, width: 300, height: 300)
         return cell
-    }
-    func collectionview(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItematIndexPath indexPath: IndexPath)->CGSize{
+    }/*
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath)->CGSize{
         return CGSize(width:CGFloat(10000), height:CGFloat(10000))
+    }*/
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("yeet")
+        pastryindex = indexPath.row//tells which pastry is being selected
+        self.performSegue(withIdentifier: "edit", sender: self)
     }
+    
+    
     
     /*
     func collectionView(_ Pastries: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -63,6 +72,7 @@ class Main: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
     
         return cell
     }*/
+    
     
     private func loadDefaults(){
         let photo1=UIImage(named:"img_Blueberry_Muffin")

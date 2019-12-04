@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+var accounttype = "Shopper"
 class StartupVC: UIViewController {
 
     @IBAction func ToStoreMain(_ sender: Any) {
@@ -19,6 +19,12 @@ class StartupVC: UIViewController {
     }
     
 
+    @IBAction func Owner(_ sender: Any) {
+        accounttype="Store Owner"
+    }
+    @IBAction func Customer(_ sender: Any) {
+        accounttype="Shopper"
+    }
     /*
     // MARK: - Navigation
 

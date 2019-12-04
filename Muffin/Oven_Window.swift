@@ -1,5 +1,5 @@
 //
-//  Oven WindowVC.swift
+//  Oven Window.swift
 //  Muffin
 //
 //  Created by Daniel Singh on 10/8/19.
@@ -9,7 +9,7 @@
 
 import UIKit
 
-class Oven_WindowViewController: UIViewController {
+class Oven_Window: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

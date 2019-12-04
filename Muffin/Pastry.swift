@@ -16,6 +16,8 @@ class Pastry: NSObject{
     var Item_name: String;
     var Item_description: String;
     var Item_pic: UIImage?;
+    //var Ingredient: [Int]//add in ingredients list if necessary?
+    
     //will need to convert from hours:minutes:seconds to seconds before initialising from inputs
     var Bake_time: Int;
     //initialisation:

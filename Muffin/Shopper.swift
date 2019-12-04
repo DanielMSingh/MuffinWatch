@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShopperVC: UIViewController {
+class Shopper: UIViewController {
     //copy most of the stuff from Main.swift;
     //for like the collectionview, etc.
     override func viewDidLoad() {
@@ -16,7 +16,8 @@ class ShopperVC: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    
+    //pretty much like main, except some are already defined there and should be able to use that.
+    //then if you select one of the cells, it should decrement the quantity of whatever item it's related to in the detail page if you select purchase (amount) in details to simulate the purchasing process to show what the stock is
 
     /*
     // MARK: - Navigation
