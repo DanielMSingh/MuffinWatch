@@ -1,31 +1,34 @@
 //
-//  StartupVC.swift
+//  Account.swift
 //  Muffin
 //
-//  Created by Daniel Singh on 10/24/19.
+//  Created by Daniel Singh on 12/5/19.
 //  Copyright © 2019 Daniel Singh. All rights reserved.
 //
 
 import UIKit
-var accounttype = "Default"
-class StartupVC: UIViewController {
 
-    @IBAction func ToStoreMain(_ sender: Any) {
-    }
+class Account: UIViewController {
+
+    @IBOutlet weak var AccountType: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        AccountType.text=accounttype
         // Do any additional setup after loading the view.
     }
-    @IBAction func Log_Out(segue:UIStoryboardSegue){}
     
-
-    @IBAction func Owner(_ sender: Any) {
-        accounttype="Store Owner"
+    @IBAction func Back(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
-    @IBAction func Customer(_ sender: Any) {
-        accounttype="Shopper"
+    
+    /*
+    @IBAction func LogOut(_ sender: Any) {
+        print("Logging OUT")
+        performSegue(withIdentifier: "Logout", sender: self)
     }
+    */
+    
+    
     /*
     // MARK: - Navigation
 

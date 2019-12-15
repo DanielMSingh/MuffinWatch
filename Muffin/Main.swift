@@ -20,13 +20,11 @@ class Main: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
     //Oven should force the user to either click a collection item to headstart the oven or click the oven to cancel.
     
     override func viewDidLoad() {
-           super.viewDidLoad()
+        super.viewDidLoad()
         
         
         if (pastries.isEmpty){loadDefaults()}//load defaults if it's completely empty. otherwise doesn't
         //!!Delete after add, edit and oven are done.
-        
-        
         //Pastries.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "PastryCVCell")
 
         Pastries.delegate=self
@@ -56,11 +54,14 @@ class Main: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
         return CGSize(width:CGFloat(10000), height:CGFloat(10000))
     }*/
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("yeet")
         pastryindex = indexPath.row//tells which pastry is being selected
         self.performSegue(withIdentifier: "edit", sender: self)
     }
     
+    @IBAction func Acc(_ sender: Any) {
+        accounttype="Store Owner"
+        self.performSegue(withIdentifier: "Acc", sender: self)
+    }
     
     
     /*
@@ -80,11 +81,11 @@ class Main: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
         let photo3=UIImage(named:"img_Brownie")
     
     
-        guard let pastry1 = Pastry(Item_name: "Blueberry Muffin", Item_quantity: 3, Item_description: "A muffin with blueberries", Item_pic: photo1, Bake_time: 300)
+        guard let pastry1 = Pastry(Item_name: "Blueberry Muffin", Item_quantity: 3, Item_description: "A muffin with blueberries", Item_pic: photo1, Bake_time: 300, Price:5.99)
         else {fatalError("unable to create pastry")}
-        guard let pastry2 = Pastry(Item_name: "Scone", Item_quantity: 7, Item_description: "Basically an english muffin?", Item_pic: photo2, Bake_time: 600)
+        guard let pastry2 = Pastry(Item_name: "Scone", Item_quantity: 7, Item_description: "Basically an english muffin?", Item_pic: photo2, Bake_time: 600, Price: 3.50)
         else {fatalError("unable to create pastry")}
-        guard let pastry3 = Pastry(Item_name: "Brownie", Item_quantity: 12, Item_description: "Bruh, you know what a brownie is", Item_pic: photo3, Bake_time: 300)
+        guard let pastry3 = Pastry(Item_name: "Brownie", Item_quantity: 12, Item_description: "Bruh, you know what a brownie is", Item_pic: photo3, Bake_time: 300, Price:2.99)
         else {fatalError("unable to create pastry")}
         pastries+=[pastry1,pastry2,pastry3]
     }

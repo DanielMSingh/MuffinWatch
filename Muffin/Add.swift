@@ -16,6 +16,7 @@ class Add: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegat
     @IBOutlet weak var ItemDescription: UITextField!
     @IBOutlet weak var ItemImage: UIImageView!
     @IBOutlet weak var BakeTime: UITextField!
+    @IBOutlet weak var Price: UITextField!
     
     
     //for the image selection:
@@ -25,26 +26,33 @@ class Add: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegat
         present(imagePicker, animated:true, completion: nil)
     }//ImageButton
     
+    @IBAction func Done(_ sender: Any) {
+        //dismiss
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func Submit(_ sender: Any) {
         //if (Interaction=="Add"||Interaction==""){
             //InteractionLabel.text = "Add Item"
         var img = UIImage(named: "img_Default")
         let Btime:Int! = Int(BakeTime.text!)
+        let ItemPrice:Float!=Float(Price.text!)
             //do necessary calculations on Btime to make it accurate
             //if it's a minute:second timer, calculate time in seconds here
         guard let name = ItemName.text, !name.isEmpty else {return}
         guard let description = ItemDescription.text, !description.isEmpty else {return}
         if (!(ItemImage.image==nil))
             {img = ItemImage.image}
-        guard let pastry = Pastry(Item_name: name, Item_quantity: 0, Item_description: description, Item_pic: img, Bake_time:Btime)
+        guard let pastry = Pastry(Item_name: name, Item_quantity: 0, Item_description: description, Item_pic: img, Bake_time:Btime,Price:ItemPrice)
             //index is set to the number of pastries in the list; i.e. if empty, then 0
                    else {fatalError("unable to create pastry")}
             pastries.append(pastry)
         //}
-        ItemName.text=nil
-        ItemDescription.text=nil
-        ItemImage.image=nil
-        BakeTime=nil
+        let photo1=UIImage(named:"Add")
+        Price.text="Price"
+        ItemName.text="Name"
+        ItemDescription.text="Description"
+        ItemImage.image=photo1
+        BakeTime.text="Time to Bake"
         
             //take reference of the item to be edited
             //set all fields as the current data for the item to be edited
@@ -53,8 +61,6 @@ class Add: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegat
             
             //most likely, have a way to select the collection and while the item is selected,
     }//Submit
-    @IBOutlet weak var Submit: UIButton!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
