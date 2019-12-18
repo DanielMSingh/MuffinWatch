@@ -18,14 +18,15 @@ class Pastry: NSObject{
     var Item_pic: UIImage?;
     var Price: Float;
     //var Ingredient: [Int]//add in ingredients list if necessary?
-    
+    var oven: Bool;
+    var Fresh:Bool;
     //will need to convert from hours:minutes:seconds to seconds before initialising from inputs
-    var Bake_time: Int;
+    var Bake_time: TimeInterval;
     //initialisation:
     func isValid() -> Bool{
         return (!(Item_quantity>=0) && !(Item_name.isEmpty) && !(Item_description.isEmpty) && !(Bake_time>=0))
     }
-    init?(Item_name: String, Item_quantity: Int, Item_description: String, Item_pic: UIImage?, Bake_time: Int, Price:Float){
+    init?(Item_name: String, Item_quantity: Int, Item_description: String, Item_pic: UIImage?, Bake_time: TimeInterval, Price:Float, oven:Bool, fresh:Bool){
         //initialisation fails without name or description. 
         guard(!Item_name.isEmpty) else
             {return nil}//name must not be empty
@@ -41,5 +42,7 @@ class Pastry: NSObject{
         self.Item_pic = Item_pic;
         self.Bake_time = Bake_time;
         self.Price = Price;
+        self.oven=false;
+        self.Fresh=fresh;
     }
 }

@@ -18,15 +18,15 @@ class Account: UIViewController {
     }
     
     @IBAction func Back(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)//dismiss, don't pop because modal
     }
     
-    /*
+    
     @IBAction func LogOut(_ sender: Any) {
         print("Logging OUT")
         performSegue(withIdentifier: "Logout", sender: self)
     }
-    */
+    
     
     
     /*

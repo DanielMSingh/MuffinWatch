@@ -12,42 +12,55 @@ class Edit: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelega
 
 
     @IBOutlet weak var ItemName: UITextField!
-    @IBOutlet weak var BakeTime: UITextField!
+    @IBOutlet weak var BakeTime: UIDatePicker!
     @IBOutlet weak var ItemDescription: UITextField!
     @IBOutlet weak var Price: UITextField!
     @IBOutlet weak var ItemImage: UIImageView!
+    @IBOutlet weak var OvenCheck: UISwitch!
     
     let imagePicker=UIImagePickerController()
     var temp_price=String(pastries[pastryindex].Price)
-    
+    weak var main:Main?
      override func viewDidLoad() {
         //make the defaults go by whatever the things are here.
         ItemName.text=pastries[pastryindex].Item_name
-        BakeTime.text=String(pastries[pastryindex].Bake_time)
+        BakeTime.countDownDuration=pastries[pastryindex].Bake_time
         ItemDescription.text=pastries[pastryindex].Item_description
         temp_price=String(pastries[pastryindex].Price)
         //Price.text="$"+temp_price//will have to format it with a split at any enter or comma?
         Price.text=temp_price
         ItemImage.image=pastries[pastryindex].Item_pic
-         super.viewDidLoad()
-         imagePicker.delegate=self
+        imagePicker.delegate=self
+        OvenCheck.setOn(pastries[pastryindex].oven,animated: false)
+        super.viewDidLoad()
      }//viewDidLoad
-     
     
-    
+    @IBAction func Delete(_ sender: Any) {
+        pastries.remove(at: pastryindex)
+        ItemName.text="none"
+        ItemDescription.text="none"
+        Price.text="none"
+        ItemImage.image = nil
+    }
     @IBAction func ImageBtn(_ sender: Any) {
         imagePicker.sourceType = .photoLibrary
         present(imagePicker, animated:true, completion: nil)
     }
+    
+    @IBAction func Special(_ sender: Any) {
+        special=pastryindex
+    }
     @IBAction func Done(_ sender: Any) {
         //dismiss
-        self.navigationController?.popViewController(animated: true)
+        main?.Pastries.reloadData()
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func Submit(_ sender: Any) {
         //if (Interaction=="Add"||Interaction==""){
             //InteractionLabel.text = "Add Item"
+        //make it so that if there's anything missing, it won't work.
         var img = UIImage(named: "img_Default")
-        let Btime:Int! = Int(BakeTime.text!)
+        let Btime = BakeTime.countDownDuration
         let itemPrice:Float!=Float(Price.text!)
             //do necessary calculations on Btime to make it accurate
             //if it's a minute:second timer, calculate time in seconds here
@@ -55,17 +68,25 @@ class Edit: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelega
             //would be a string still and would be able to just take in hh:mm:ss or whatever
             //then *here* I would convert it into an integer representing amount of seconds
             //in the oven, I'd have calculations to turn it back into hh:mm:ss for the timer
+        //brownies take 25~30 minutes, muffins, around 30, scones: 15... minutes makes sense
         guard let name = ItemName.text, !name.isEmpty else {return}
         guard let description = ItemDescription.text, !description.isEmpty else {return}
         if (!(ItemImage.image==nil))
             {img = ItemImage.image}
-        guard let pastry = Pastry(Item_name: name, Item_quantity: 0, Item_description: description, Item_pic: img, Bake_time:Btime, Price:itemPrice)
+        if (!pastries[pastryindex].oven && OvenCheck.isOn){
+            //if the item was not already in the oven but oven has been checked, add to oven
+            Oven.append(pastries[pastryindex])
+            ovenIdx.append(pastryindex)//for freshness
+            timers.append(pastries[pastryindex].Bake_time)
+            print("adding to oven")
+        }
+        guard let pastry = Pastry(Item_name: name, Item_quantity: 0, Item_description: description, Item_pic: img, Bake_time:Btime, Price:itemPrice, oven: (OvenCheck.isOn), fresh:(pastries[pastryindex].Fresh))
             //index is set to the number of stripastries in the list; i.e. if empty, then 0
                    else {fatalError("unable to create pastry")}
             pastries[pastryindex]=pastry//replace everything with this new one
         //}
         ItemName.text=pastries[pastryindex].Item_name
-        BakeTime.text=String(pastries[pastryindex].Bake_time)
+        BakeTime.countDownDuration=(pastries[pastryindex].Bake_time)
         ItemDescription.text=pastries[pastryindex].Item_description
         //Price.text="$"+temp_price
         Price.text=temp_price

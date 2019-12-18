@@ -11,4 +11,6 @@ import UIKit
 class PastryCVCell: UICollectionViewCell {
     
     @IBOutlet weak var Pastry_Image: UIImageView!
+    // add outlet for timer, put the timer label inside the cell.
+    @IBOutlet weak var timer: UILabel!
 }

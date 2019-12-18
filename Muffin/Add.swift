@@ -15,10 +15,10 @@ class Add: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegat
     @IBOutlet weak var ItemName: UITextField!
     @IBOutlet weak var ItemDescription: UITextField!
     @IBOutlet weak var ItemImage: UIImageView!
-    @IBOutlet weak var BakeTime: UITextField!
+    @IBOutlet weak var BakeTimer: UIDatePicker!
     @IBOutlet weak var Price: UITextField!
     
-    
+    weak var main: Main?
     //for the image selection:
     let imagePicker=UIImagePickerController()
     @IBAction func ImageBtn(_ sender: Any) {
@@ -27,14 +27,17 @@ class Add: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegat
     }//ImageButton
     
     @IBAction func Done(_ sender: Any) {
-        //dismiss
-        self.navigationController?.popViewController(animated: true)
+        //
+        main?.Pastries.reloadData() //self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true, completion: nil)
     }
     @IBAction func Submit(_ sender: Any) {
         //if (Interaction=="Add"||Interaction==""){
             //InteractionLabel.text = "Add Item"
         var img = UIImage(named: "img_Default")
-        let Btime:Int! = Int(BakeTime.text!)
+        //let Btime:Int! = Int(BakeTime.text!)
+        let Btime = BakeTimer.countDownDuration
+        //countdownduration gives number in seconds
         let ItemPrice:Float!=Float(Price.text!)
             //do necessary calculations on Btime to make it accurate
             //if it's a minute:second timer, calculate time in seconds here
@@ -42,7 +45,7 @@ class Add: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegat
         guard let description = ItemDescription.text, !description.isEmpty else {return}
         if (!(ItemImage.image==nil))
             {img = ItemImage.image}
-        guard let pastry = Pastry(Item_name: name, Item_quantity: 0, Item_description: description, Item_pic: img, Bake_time:Btime,Price:ItemPrice)
+        guard let pastry = Pastry(Item_name: name, Item_quantity: 0, Item_description: description, Item_pic: img, Bake_time:Btime,Price:ItemPrice, oven:false, fresh: false)
             //index is set to the number of pastries in the list; i.e. if empty, then 0
                    else {fatalError("unable to create pastry")}
             pastries.append(pastry)
@@ -52,7 +55,7 @@ class Add: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegat
         ItemName.text="Name"
         ItemDescription.text="Description"
         ItemImage.image=photo1
-        BakeTime.text="Time to Bake"
+        //BakeTime.text="Time to Bake"
         
             //take reference of the item to be edited
             //set all fields as the current data for the item to be edited

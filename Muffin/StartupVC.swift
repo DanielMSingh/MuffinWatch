@@ -26,6 +26,25 @@ class StartupVC: UIViewController {
     @IBAction func Customer(_ sender: Any) {
         accounttype="Shopper"
     }
+    
+    let clock = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {
+       clock in
+        if (Oven.count>0){
+            for x in 1...(Oven.count){
+                if (!timers.isEmpty){
+                    timers[x-1] -= 1
+                    if (timers[x-1]<=0){
+                        print("removing \(Oven[x-1])")
+                        Oven.remove(at: x-1)
+                        timers.remove(at: x-1)
+                        pastries[ovenIdx[x-1]].Fresh=true
+                        //remove the item from the oven, timer and index
+                    }
+                }
+            }
+        }
+    })
+    
     /*
     // MARK: - Navigation
 

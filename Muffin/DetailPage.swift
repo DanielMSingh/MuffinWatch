@@ -19,16 +19,20 @@ class DetailPage: UIViewController {
     @IBOutlet weak var price: UILabel!
     @IBOutlet weak var Description: UILabel!
     
+    weak var shopper:Shopper?
+    
+    
     @IBAction func Done(_ sender: Any) {
         //dismiss to shopper
-        self.navigationController?.popViewController(animated: true)
+        shopper?.Pastries.reloadData()//
+        dismiss(animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         Name.text=pastries[pastryindex].Item_name
         Pic.image=pastries[pastryindex].Item_pic
         price.text="$"+String(pastries[pastryindex].Price)
-        Description.text=pastries[pastryindex].description
+        Description.text=pastries[pastryindex].Item_description
     }
     //in the collectionview, show all the items in [pastries].
     //do all the same stuff for the detail view that was done in the main for edit segue.
