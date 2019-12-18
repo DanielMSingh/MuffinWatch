@@ -265,12 +265,19 @@
                                 <color key="textColor" red="0.91421687602996826" green="0.49207085371017456" blue="0.65547490119934082" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g36-bu-8js" userLabel="Tray">
-                                <rect key="frame" x="16" y="382" width="382" height="226"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRt-J3-Uwf">
+                                <rect key="frame" x="64" y="271" width="26" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Close:" destination="XTX-t9-jS2" eventType="touchUpInside" id="1CY-ds-Xy2"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g36-bu-8js" userLabel="Tray">
+                                <rect key="frame" x="27.5" y="384" width="359" height="222"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="g36-bu-8js" secondAttribute="height" multiplier="191:113" id="LV8-cM-Ygd"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DaB-hE-fJN">
                                     <size key="itemSize" width="85" height="85"/>
                                     <size key="estimatedItemSize" width="85" height="85"/>
@@ -294,18 +301,21 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2rR-3J-uR9" userLabel="Timer">
-                                                    <rect key="frame" x="7" y="0.0" width="71.5" height="21"/>
+                                                    <rect key="frame" x="6.5" y="0.0" width="72" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="L5R-89-QP5" firstAttribute="centerX" secondItem="mmm-AV-mBw" secondAttribute="centerX" id="MDo-yh-ft6"/>
+                                                <constraint firstItem="2rR-3J-uR9" firstAttribute="centerX" secondItem="mmm-AV-mBw" secondAttribute="centerX" id="MED-68-vNd"/>
                                                 <constraint firstItem="2rR-3J-uR9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mmm-AV-mBw" secondAttribute="leading" id="MNx-hB-1Hf"/>
                                                 <constraint firstItem="2rR-3J-uR9" firstAttribute="trailing" secondItem="mmm-AV-mBw" secondAttribute="trailing" constant="-6.5" id="VXz-87-95r"/>
                                                 <constraint firstItem="L5R-89-QP5" firstAttribute="top" secondItem="2rR-3J-uR9" secondAttribute="top" id="bgS-nW-0w1"/>
                                                 <constraint firstItem="L5R-89-QP5" firstAttribute="trailing" secondItem="2rR-3J-uR9" secondAttribute="trailing" constant="6.5" id="eim-Ud-OMd"/>
                                                 <constraint firstItem="2rR-3J-uR9" firstAttribute="top" secondItem="mmm-AV-mBw" secondAttribute="top" id="hzc-P2-Etd"/>
+                                                <constraint firstItem="L5R-89-QP5" firstAttribute="centerY" secondItem="mmm-AV-mBw" secondAttribute="centerY" id="yek-qr-EG8"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="85" height="85"/>
@@ -316,35 +326,28 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRt-J3-Uwf">
-                                <rect key="frame" x="64" y="271" width="26" height="23"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="Close:" destination="XTX-t9-jS2" eventType="touchUpInside" id="1CY-ds-Xy2"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qaS-9S-hfH" firstAttribute="trailing" secondItem="L1s-Fy-Cus" secondAttribute="trailing" constant="-138" id="2io-52-qaM"/>
-                            <constraint firstItem="g36-bu-8js" firstAttribute="trailing" secondItem="UwQ-to-Lod" secondAttribute="trailing" constant="-9" id="42T-Hd-cN5"/>
                             <constraint firstItem="mRt-J3-Uwf" firstAttribute="top" secondItem="UwQ-to-Lod" secondAttribute="top" constant="23" id="5L9-Gu-sF1"/>
                             <constraint firstItem="UwQ-to-Lod" firstAttribute="leading" secondItem="L1s-Fy-Cus" secondAttribute="leading" constant="7" id="6sr-ru-KhP"/>
                             <constraint firstItem="mRt-J3-Uwf" firstAttribute="leading" secondItem="UwQ-to-Lod" secondAttribute="leading" constant="57" id="I1E-qS-WRP"/>
                             <constraint firstItem="g36-bu-8js" firstAttribute="centerX" secondItem="n1T-Vp-En7" secondAttribute="centerX" id="JQM-hj-way"/>
+                            <constraint firstItem="g36-bu-8js" firstAttribute="leading" secondItem="UwQ-to-Lod" secondAttribute="leading" constant="20.5" id="KhV-5e-yBi"/>
                             <constraint firstItem="g36-bu-8js" firstAttribute="centerY" secondItem="n1T-Vp-En7" secondAttribute="centerY" constant="47" id="LMR-G5-cin"/>
-                            <constraint firstItem="g36-bu-8js" firstAttribute="top" secondItem="qaS-9S-hfH" secondAttribute="bottom" constant="81" id="QQL-pJ-0dv"/>
+                            <constraint firstItem="UwQ-to-Lod" firstAttribute="centerX" secondItem="n1T-Vp-En7" secondAttribute="centerX" id="NCe-ro-5f4"/>
+                            <constraint firstItem="g36-bu-8js" firstAttribute="top" relation="lessThanOrEqual" secondItem="qaS-9S-hfH" secondAttribute="bottom" constant="83" id="QQL-pJ-0dv"/>
                             <constraint firstItem="qaS-9S-hfH" firstAttribute="leading" secondItem="L1s-Fy-Cus" secondAttribute="leading" constant="121" id="QcU-Dk-Vu5"/>
                             <constraint firstItem="UwQ-to-Lod" firstAttribute="top" secondItem="L1s-Fy-Cus" secondAttribute="top" constant="204" id="Xx1-xT-ZiD"/>
                             <constraint firstItem="UwQ-to-Lod" firstAttribute="top" secondItem="L1s-Fy-Cus" secondAttribute="top" constant="204" id="ZCK-1T-vKU"/>
                             <constraint firstItem="qaS-9S-hfH" firstAttribute="leading" secondItem="mRt-J3-Uwf" secondAttribute="trailing" constant="31" id="a6P-wO-BXE"/>
                             <constraint firstItem="qaS-9S-hfH" firstAttribute="top" secondItem="UwQ-to-Lod" secondAttribute="top" constant="12" id="aSu-Jk-foa"/>
-                            <constraint firstItem="g36-bu-8js" firstAttribute="leading" secondItem="UwQ-to-Lod" secondAttribute="leading" constant="9" id="fik-DV-QwH"/>
                             <constraint firstItem="UwQ-to-Lod" firstAttribute="centerY" secondItem="n1T-Vp-En7" secondAttribute="centerY" id="hdu-lT-kHl"/>
-                            <constraint firstItem="g36-bu-8js" firstAttribute="bottom" secondItem="UwQ-to-Lod" secondAttribute="bottom" constant="-40" id="rgV-yl-9JL"/>
+                            <constraint firstItem="UwQ-to-Lod" firstAttribute="centerY" secondItem="n1T-Vp-En7" secondAttribute="centerY" id="jUD-ua-mLO"/>
+                            <constraint firstItem="UwQ-to-Lod" firstAttribute="trailing" secondItem="g36-bu-8js" secondAttribute="trailing" constant="20.5" id="m8v-OP-oxn"/>
+                            <constraint firstItem="g36-bu-8js" firstAttribute="bottom" secondItem="UwQ-to-Lod" secondAttribute="bottom" constant="-42" id="rgV-yl-9JL"/>
+                            <constraint firstItem="UwQ-to-Lod" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="g36-bu-8js" secondAttribute="bottom" constant="42" id="ri3-pr-zZ2"/>
                             <constraint firstItem="g36-bu-8js" firstAttribute="centerX" secondItem="UwQ-to-Lod" secondAttribute="centerX" id="sCg-di-WDF"/>
                             <constraint firstItem="UwQ-to-Lod" firstAttribute="centerX" secondItem="n1T-Vp-En7" secondAttribute="centerX" id="xdw-bH-PCj"/>
                         </constraints>
@@ -829,7 +832,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fpj-Vh-fvd" userLabel="Done">
-                                <rect key="frame" x="132" y="343" width="136" height="37"/>
+                                <rect key="frame" x="166" y="343" width="68" height="37"/>
                                 <state key="normal" title="Back" backgroundImage="Icon Bit">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
