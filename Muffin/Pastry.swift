@@ -20,7 +20,7 @@ class Pastry: NSObject{
     //var Ingredient: [Int]//add in ingredients list if necessary?
     var oven: Bool;
     var Fresh:Bool;
-    //will need to convert from hours:minutes:seconds to seconds before initialising from inputs
+    //var stock: Int;
     var Bake_time: TimeInterval;
     //initialisation:
     func isValid() -> Bool{

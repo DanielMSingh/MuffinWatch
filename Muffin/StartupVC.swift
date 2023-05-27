@@ -38,6 +38,9 @@ class StartupVC: UIViewController {
                         Oven.remove(at: x-1)
                         timers.remove(at: x-1)
                         pastries[ovenIdx[x-1]].Fresh=true
+                        //pastries[ovenIdx[x-1].stock+=pastries[ovenIdx[x-1].batchsize
+                        //or
+                        //pastries[ovenIdx[x-1].stock+=batchSize[x-1]
                         //remove the item from the oven, timer and index
                     }
                 }
